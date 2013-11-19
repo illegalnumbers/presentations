@@ -1,0 +1,11 @@
+<h4>Activities</h4>
+<ul data-bind="foreach: activities">
+    <li>
+        Name at position <span data-bind="text: $index"> </span>:
+        <span data-bind="text: name"> </span>
+        <a href="#" data-bind="click: $parent.removeActivity">Remove</a>
+    </li>
+</ul>
+
+<input id="nameText" type="text" data-bind="value: typedName"/>
+<button data-bind="click: addActivity">Add</button>
