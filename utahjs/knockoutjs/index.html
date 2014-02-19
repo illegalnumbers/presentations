@@ -1,3 +1,10 @@
+<html>
+<head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="scripts/knockout.js"></script>
+<script type="text/javascript" src="scripts/viewmodel.js"></script>
+</head>
+<body>
 <h4>Activities</h4>
 <ul data-bind="foreach: activities">
     <li>
@@ -9,3 +16,6 @@
 
 <input id="nameText" type="text" data-bind="value: typedName"/>
 <button data-bind="click: addActivity">Add</button>
+
+</body>
+</html>

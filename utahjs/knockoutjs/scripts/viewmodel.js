@@ -17,6 +17,7 @@ function ViewModel() {
         self.activities.remove(this);
     }
 }
-
+$(document).ready(function() {
 var viewModel = new ViewModel();
 ko.applyBindings(viewModel);
+});
