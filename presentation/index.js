@@ -16,11 +16,14 @@ import {
   Text
 } from 'spectacle';
 
+import CodeSlide from 'spectacle-code-slide';
+
 // Import theme
-import createTheme from 'spectacle/lib/themes/default';
+import createTheme from 'spectacle-theme-nova';
+import 'prismjs/components/prism-bash';
+import 'prismjs/components/prism-git';
 
 const images = {
-  formidagon: require('../assets/formidable-logo.svg'),
   goodWork: require('../assets/good-work.gif')
 };
 
