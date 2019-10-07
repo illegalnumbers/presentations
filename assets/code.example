@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for i in thing; do
+  echo $i
+  echo 'are you entertained?'
+done

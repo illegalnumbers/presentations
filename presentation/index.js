@@ -16,12 +16,14 @@ import {
   Text
 } from 'spectacle';
 
-import CodeSlide from 'spectacle-code-slide';
-
 // Import theme
 import createTheme from 'spectacle-theme-nova';
+import 'spectacle-theme-nova/syntax/prism.nova.css';
+import Prism from 'prismjs/components/prism-core';
 import 'prismjs/components/prism-bash';
 import 'prismjs/components/prism-git';
+
+import CodeSlide from 'spectacle-code-slide';
 
 const images = {
   goodWork: require('../assets/good-work.gif')
@@ -31,14 +33,14 @@ const images = {
 require('normalize.css');
 
 const theme = createTheme(
+  // {
+  //   primary: 'white',
+  //   secondary: '#1F2022',
+  //   tertiary: '#03A9FC',
+  //   quaternary: '#CECECE'
+  // },
   {
-    primary: 'white',
-    secondary: '#1F2022',
-    tertiary: '#03A9FC',
-    quaternary: '#CECECE'
-  },
-  {
-    primary: 'Montserrat',
+    primary: 'Open Sans Condensed',
     secondary: 'Helvetica'
   }
 );
@@ -59,9 +61,21 @@ export default class Presentation extends React.Component {
             open the presentation/index.js file to get started
           </Text>
         </Slide>
-        <Slide bgColor="secondary">
-          <Image src={images.formidagon} width={800} />
-        </Slide>
+        <CodeSlide
+          transition={[]}
+          lang="bash"
+          height={700}
+          wdith={700}
+          textSize="2em"
+          code={require("raw-loader!../assets/code.example")}
+          ranges={[
+            { loc: [0, 270], title: "Walking through some code" },
+            { loc: [0, 1], title: "The Beginning" },
+            { loc: [1, 2] },
+            { loc: [1, 2], note: "Heres a note!" },
+            { loc: [2, 3] }
+          ]}/>
+
         <Slide transition={['fade']} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>
             Typography
