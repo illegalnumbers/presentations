@@ -17,7 +17,8 @@ import {
 } from 'spectacle';
 
 // Import theme
-import createTheme from 'spectacle-theme-nova';
+// import createTheme from 'spectacle-theme-nova';
+import createTheme from 'spectacle-theme-anker';
 import 'spectacle-theme-nova/syntax/prism.nova.css';
 import Prism from 'prismjs/components/prism-core';
 import 'prismjs/components/prism-bash';
@@ -64,8 +65,6 @@ export default class Presentation extends React.Component {
         <CodeSlide
           transition={[]}
           lang="bash"
-          height={700}
-          wdith={700}
           textSize="2em"
           code={require("raw-loader!../assets/code.example")}
           ranges={[
